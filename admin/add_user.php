@@ -17,14 +17,6 @@ include("nav.php");
 <form action="post.php" method="post">
 	
 	<div class="form-group">
-		<label>Access</label>
-		<select class="form-control" name="access">
-			<option value="1">User</option>
-			<option value="9">Admin</option>
-		</select>
-	</div>
-
-	<div class="form-group">
 		<label>Name</label>
 		<input type="text" class="form-control" name="name" autofocus>
 	</div>
@@ -39,7 +31,13 @@ include("nav.php");
 		<input type="password" class="form-control" name="password">
 	</div>
 
-
+	<div class="form-group">
+		<label>Access</label>
+		<select class="form-control" name="access">
+			<option value="1">User</option>
+			<option value="9">Admin</option>
+		</select>
+	</div>
 	
 	<button type="submit" class="btn btn-primary btn-block" name="add_user">Create</button>
 

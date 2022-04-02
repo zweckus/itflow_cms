@@ -37,14 +37,6 @@ if(isset($_GET['user_id'])){
 
 <form action="post.php" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-	
-	<div class="form-group">
-		<label>Access</label>
-		<select class="form-control" name="access">
-			<option value="1" <?php if($access == 1){ echo "selected"; } ?>>User</option>
-			<option value="9" <?php if($access == 9){ echo "selected"; } ?>>Admin</option>
-		</select>
-	</div>
 
 	<div class="form-group">
 		<label>Name</label>
@@ -55,10 +47,20 @@ if(isset($_GET['user_id'])){
 		<label>Email</label>
 		<input type="email" class="form-control" name="email" value="<?php echo $email; ?>" required>
 	</div>
+	
 	<div class="form-group">
 		<label>Password</label>
 		<input type="password" class="form-control" name="password" placeholder="Leave blank for no change">
 	</div>
+
+	<div class="form-group">
+		<label>Access</label>
+		<select class="form-control" name="access">
+			<option value="1" <?php if($access == 1){ echo "selected"; } ?>>User</option>
+			<option value="9" <?php if($access == 9){ echo "selected"; } ?>>Admin</option>
+		</select>
+	</div>
+
 	<button type="submit" class="btn btn-primary btn-block" name="edit_user">Save</button>
 </form>
 

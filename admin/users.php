@@ -74,6 +74,7 @@ $num_rows = mysqli_fetch_row(mysqli_query($mysqli,"SELECT FOUND_ROWS()"));
 		<thead class="thead-light">
 			<tr>
 				<th><a class="text-secondary" href="?<?php echo $url_query_strings_sb; ?>&sortby=user_name&order=<?php echo $order; ?>">User</a></th>
+				<th><a class="text-secondary" href="?<?php echo $url_query_strings_sb; ?>&sortby=user_email&order=<?php echo $order; ?>">Email</a></th>
 				<th><a class="text-secondary" href="?<?php echo $url_query_strings_sb; ?>&sortby=event_ip&order=<?php echo $order; ?>">IP</a></th>
 				<th><a class="text-secondary" href="?<?php echo $url_query_strings_sb; ?>&sortby=event_user_agent&order=<?php echo $order; ?>">User Agent</a></th>
 				<th><a class="text-secondary" href="?<?php echo $url_query_strings_sb; ?>&sortby=user_access&order=<?php echo $order; ?>">Access</a></th>
@@ -99,6 +100,7 @@ $num_rows = mysqli_fetch_row(mysqli_query($mysqli,"SELECT FOUND_ROWS()"));
 			
 			<tr>	
 				<td><a href="edit_user.php?user_id=<?php echo $user_id; ?>"><?php echo $username; ?></a></td>
+				<td><?php echo $email; ?></td>
 				<td><?php echo $ip; ?></td>
 				<td><small><?php echo $user_agent; ?></small></td>
 				<td><?php echo $user_access; ?></td>
